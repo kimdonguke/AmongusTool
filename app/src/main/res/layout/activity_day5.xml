@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".day5">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="<"
+            />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=">"/>
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/image_03"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img06"
+            />
+        <ImageView
+            android:id="@+id/image_04"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img07"
+            />
+        <ImageView
+            android:id="@+id/image_01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img04"
+            />
+
+        <ImageView
+            android:id="@+id/image_02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/img05"
+            />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:src="@drawable/gui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/ban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5반"
+        android:layout_centerInParent="true"
+        android:textSize="36sp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ban"
+        android:layout_toLeftOf="@+id/ban"
+        android:text="20501"
+        android:paddingRight="70dp"
+        android:textSize="36sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ban"
+        android:layout_toRightOf="@+id/ban"
+        android:text="김동욱"
+        android:paddingLeft="70dp"
+        android:textSize="36sp"
+        />
+
+
+</RelativeLayout>
