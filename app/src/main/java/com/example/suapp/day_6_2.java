@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -68,44 +69,34 @@ public class day_6_2 extends AppCompatActivity {
         bt4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(check1.isChecked()==true){
-                    check1.setChecked(false);
+                check1.toggle();
+                check2.toggle();
+            }
+        });
+        check1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if ( isChecked )
+                {
+                    Toast.makeText(day_6_2.this, "1번 체크 되었습니당 >,<", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    check1.setChecked(true);
-                }
-                if(check2.isChecked()==true){
-                    check2.setChecked(false);
-                }
-                else{
-                    check2.setChecked(true);
+                    Toast.makeText(day_6_2.this, "1번 체크가 해제 되었습니다 ㅠ_ㅜ", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
-    }
-    public void onCheckBoxClicked(View view){
-        switch (view.getId()) {
-            case R.id.check_1:
-                if (check1.isChecked()) {
-                    Toast.makeText(this, "체크박스1이 체크되었습니다", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(this, "체크박스1가 해제되었습니다", Toast.LENGTH_SHORT).show();
+        check2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    Toast.makeText(day_6_2.this, "2번 체크 되었습니당 >,<", Toast.LENGTH_SHORT).show();
                 }
-                break;
-            case R.id.check_2:
-
-                if (check2.isChecked()) {
-                    Toast.makeText(this, "체크박스2이 체크되었습니다", Toast.LENGTH_SHORT).show();
-
-                } else {
-                    Toast.makeText(this, "체크박스2가 해제되었습니다", Toast.LENGTH_SHORT).show();
+                else{
+                    Toast.makeText(day_6_2.this, "2번 체크가 해제 되었습니다 ㅠ_ㅜ", Toast.LENGTH_SHORT).show();
                 }
-        }
+            }
+        });
     }
-
-
 }
 
 
